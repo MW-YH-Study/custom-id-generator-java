@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://103.218.159.74:3306/xfashion?autoReconnect=true
+    username: xfashion-dev
+    password: Xfashion2023
+
+    hikari:
+      maximum-pool-size: 5
+      idle-timeout: 10000
+      max-lifetime: 420000
+      connection-timeout: 10000
+      validation-timeout: 10000
+
+    dbcp2:
+      test-while-idle: true
+      validation-query: SELECT 1
+
+  jpa:
+    open-in-view: false
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        dialect: org.hibernate.dialect.MySQL57Dialect
+
+id_generator:
+  datacenter_id: 5
+  server_id: 12

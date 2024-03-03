@@ -1,0 +1,22 @@
+server:
+  port: 15040
+  tomcat:
+    use-relative-redirects: true
+  servlet:
+    encoding:
+      force: true
+    session:
+      timeout: 600m
+  error:
+    path: /error
+
+spring:
+  #  web:
+  #    resources:
+  #      static-locations: classpath:/templates/
+  #      add-mappings: true
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
